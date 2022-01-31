@@ -5,6 +5,6 @@
 
  <p align="center"> 
 
-![ui](./ui.svg)
+![ui](./ui.jpg)
 
  </p>
