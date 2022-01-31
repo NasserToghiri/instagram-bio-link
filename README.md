@@ -5,6 +5,6 @@
 
  <p align="center"> 
 
-![ui](./ui.jpg)
+![ui](./assets/ui.jpg)
 
  </p>
