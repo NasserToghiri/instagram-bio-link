@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Aldrich', sans-serif;
+    
+   
+}
+
+:root{
+--primary-color: rgb(248, 210, 83);
+--secondary-color: rgb(84, 186, 78);
+--tertiary-color: rgb(248, 249, 204);
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    background-color: var(--tertiary-color) ;
+    max-width: 430px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    overflow-x: hidden;
+}
+.profile{
+    height: 22em;
+    width: 16em;
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+.profile-box{
+    height: 22em;
+    width: 16em;
+    background-color: var(--primary-color);
+    border: 2px solid black;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-shadow: -11px 11px 0 -3px black;
+    transition: box-shadow 600ms ease-out, bottom 600ms ease-out, left 600ms ease-out;
+}
+.profile-box:hover{
+
+    box-shadow: -3px 3px 0 -3px black;
+    bottom: -8px;
+    left: -8px;
+}
+
+.profile-head{
+    width: 100%;
+    height: 1.5em;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 0.3em;
+}
+.profile-button {
+    width: 0.8em;
+    height: 0.8em;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 0.3em;
+ }
+
+.profile-photo{
+    height: 19em;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+#toghiri-photo{
+    width: 20em;
+}
+.frist-star{
+    position: absolute;
+    z-index: -1;
+    top: -2.2em;
+    right: -2.5em;
+    animation: star-rotate 4s infinite;
+}
+
+.line{
+    position: absolute;
+    top: 0;
+    left: -5.6em;
+    z-index: -2 ;
+    margin-top: 4em;
+    width: 430px;
+    height: 2px;
+    background-color: black;
+    box-shadow: 0 1.5em black, 0 3em black, 0 4.5em black, 0 6em black, 0 7.5em black, 0 9em black;
+}
+
+@keyframes star-rotate {
+    0% {
+        transform: rotate(0turn);
+    }
+    50%{
+        transform: rotate(1turn);
+    }
+    100% {
+        transform: rotate(0turn);
+    }
+}
+
+.profile .pencil {
+    position: absolute;
+    z-index: 2;
+    top: -1.5em;
+    left: 1em;
+}
+
+.arrow1{
+    width: 40%;
+    position: absolute;
+    stroke-width: 2px;
+    stroke: black;
+    right: -2.3em;
+    bottom: -6.9em;
+    fill: transparent;
+}
+
+
+/* section 2 - name and family box */
+
+.name{
+    margin-top: 3em;
+    width: 13em;
+    height: 4em;
+    position: relative;
+    left: -2.8em;
+}
+
+.name-box{
+    width: 13em;
+    height: 4em;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: start;
+    align-items: flex-end; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: bottom 500ms ease-out, left 500ms ease-out;
+}
+
+.name .name-box:hover{
+    bottom: -0.3em;
+    left: -0.2em;
+}
+.name .name-box:hover + .name-shadow{
+    transform: translate( -3px , 12px );
+}
+.name-triange{
+    width: 0;
+      height: 0;
+      border-top: 23px solid var(--primary-color);
+      border-left: 25px solid transparent;
+      box-shadow: 0 0 0 2px black ;
+}
+
+.name-shadow{
+    width: 11.5em;
+    height: 3.5em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
+    background-color: black;
+    position: absolute;
+    z-index: -1;    	
+    transform: translate( -4px , 12px );
+    transition: transform 500ms ease-out;
+}
+
+.name-box h1{
+    font-size: 1.1em;
+    position: absolute;
+    align-self: center;
+    margin-left: 2.6em;
+    color: black;
+}
+.arrow2{
+    position: absolute;
+    width: 40%;
+    stroke-width: 2px;
+    stroke: black;
+    bottom: -4em;
+
+}
+.key{
+    width: 2em;
+    position: absolute;
+    right: -2.5em;
+    top: 2.5em;
+}
+
+
+
+/* section 3 - feild */
+
+.feild{
+    margin-top: 3em;
+    width: 12.5em;
+    height: 3.8em;
+    position: relative;
+    
+}
+
+.feild-box{
+    width: 12.5em;
+    height: 3.8em;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: start;
+    align-items: flex-end; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
+    border: 2px solid black;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transition: bottom 500ms ease-out, left 500ms ease-out;
+}
+.feild .feild-box:hover{
+    bottom: -0.3em;
+    left: -0.2em;
+}
+.feild .feild-box:hover + .feild-shadow{
+    width: 11.2em;
+    left: 2px;
+}
+.feild-triange{
+    width: 0;
+    height: 0;
+    border-top: 20px solid var(--primary-color);
+    border-left: 23px solid transparent;
+    box-shadow: 0 0 0 2px black ;
+}
+
+.feild-shadow{
+    width: 11.5em;
+    height: 3.3em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
+    background-color: black;
+    position: absolute;
+    left: 0;
+    z-index: -1;    	
+    transform: translate( -5px , -48px );
+    transition: left 500ms ease-out, width 500ms ease-out;
+}
+
+.feild-box h2{
+    font-size: 0.8em;
+    position: absolute;
+    align-self: center;
+    margin-left: 2.4em;
+    color: black;
+    line-height: 1.5em;
+}
+
+.arrow3{
+    position: absolute;
+    width: 50%;
+    stroke: black;
+    stroke-width: 2px;
+    right: -2.8em;
+    bottom: -6em;
+}
+.suitable{
+    position: absolute;
+    left: -2.5em;
+    bottom: -1em;
+    width: 2em;
+}
+
+/* section 4 - about me */
+.aboutme{
+    width: 16em;
+    height: 16em;
+    background-color: var(--primary-color);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 2px solid black;
+    box-shadow: ;
+    position: relative;
+    left: -1em;
+}
+.aboutme::after{
+    content: "";
+    width: 15.7em;
+    height: 15.7em;
+    background-color: var(--primary-color);
+    border: 2px solid black;
+    position: absolute;
+    z-index: -1;
+    transform: translate(0.4em , -13.4em);
+       
+}
+.aboutme::before{
+    content: "";
+    width: 15.7em;
+    height: 15.7em;
+    background-color: var(--primary-color);
+    border: 2px solid black;
+    position: absolute;
+    z-index: -2;
+    transform: translate(0.8em , 0.9em);
+}
+.title-aboutme p {
+    font-size: 1em;
+    padding-top: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.aboutme .text-aboutme {
+    font-size: 0.8em;
+    padding: 1em;
+    text-align: center;
+}
+
+.second-star{
+    position: absolute;
+    bottom: -3em;
+    left: -2.5em;
+    z-index: -4;
+    animation: star-rotate 4s infinite;
+}
+
+/* sand timer  */
+.watch{
+    position: absolute;
+    top: 5em;
+    right: -3em;
+}
+
+.soil rect {
+    stroke: black;
+    stroke-width: 1.01527px;
+}
+.soil{
+
+    animation: timer 15s ease-in  infinite forwards;
+}
+@keyframes timer {
+    0%{
+        clip-path: polygon(30% 0, 70% 0, 85% 40%, 15% 40%);
+    }
+    6%{
+        clip-path: polygon(30% 0, 70% 0, 85% 40%, 15% 40%);
+    }
+    50%{
+        clip-path: polygon(40% 35%, 60% 35%, 60% 100%, 40% 100%);
+    }
+    80%{
+        clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%)
+    }
+    100%{
+        clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%)
+    }
+}
+
+
+
+/* section 4 - Rotation 1 */
+.rotation{
+    width: 100%;
+    height: 10em;
+    margin-top: 0.3em;
+    position: relative;
+    margin-bottom: 0.5em;
+
+}
+.hit-rotation{
+position: absolute;
+width: 5em;
+height: 2px;
+background-color: black;
+transform: rotate(30deg);
+right: 2em;
+top: -3.1em;
+}
+.circle-rotation{
+    position: absolute;
+    right: 4em;
+    top: -3.3em;
+
+}
+.ground-rotation{
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: black;
+transform: rotate(-15deg);
+top: 6em;
+
+}
+
+/* section 5 - media */
+.media-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3em;
+    padding:3%;
+}
+
+.social-media-center{
+    display: flex;
+   
+}
+.social-media-center:nth-child(even){
+    justify-self: start;
+
+}
+.social-media-center:nth-child(odd){
+    justify-self: end;
+
+}
+
+.media{
+    width: 100%;
+    text-align: right;
+    margin-right: 40%;
+    margin-bottom: 2em;
+}
+.media h3{
+    color: black;
+    font-size: 1.2em;
+}
+
+.social-media{
+    width: 8em;
+    height: 11.5em;
+    background-color: var(--primary-color);
+    margin-bottom: 2em;
+    border: 2px solid black;
+    box-shadow: -9px 9px 0 -3px black;
+    padding: 0.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+}
+.social-media:hover{
+    box-shadow: -3px 3px 0 -3px;
+    left: -6px;
+    bottom: 6x;
+}
+.social-media:active .click-here{
+    background-color: var(--tertiary-color);
+}
+
+.social-image{
+    width: 100%;
+    height: 4.2em;
+    border: 2px solid black;
+    margin-bottom: 0.4em;
+}
+.social-image img {
+    width: 100px;
+}
+.social-media>p {
+    font-size: 0.7em;
+    color: black;
+    margin-bottom: 0.7em;
+}
+.social-media h3 {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: 0.5em;
+}
+.social-media div p {
+    font-size: 0.8em;
+}
+.social-media .click-here{
+    border: 2px solid black;
+    padding: 3px 8px;
+    border-radius: 1.5em;
+    background-color: var(--secondary-color);
+}
+
+.social-media-center a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/* rotation 2 */
+.happy-man-icon{
+    width: 4em;
+    position:absolute;
+    top: -3.5em;
+    left: 5em;
+    transform: rotate(15deg);
+
+}
+.line-animation{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 5em;
+
+}
+
+
+
+/* section 6 - contact me */
+.contact-father{
+    position: relative;
+}
+.contact{
+    width: 16em;
+    height: 4em;
+    background-color: var(--primary-color);
+    border: 2px solid black;
+    box-shadow: -9px 9px 0 -3px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    right: -1em;
+    bottom: 0;
+    transition: box-shadow 500ms ease-out, bottom 500ms ease-out, right 500ms ease-out;
+
+}
+.contact:hover{
+    box-shadow: -3px 3px 0 -3px black;
+    right: -6px;
+    bottom: -6px;
+}
+.contact div {
+    width: 2em;
+    height: 2em;
+    border: 2px solid black;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    box-shadow: -4px 4px 0 -2px ;
+    transition: box-shadow 300ms ease-out, bottom 300ms ease-out, right 300ms ease-out;
+
+}
+.contact div:hover{
+    box-shadow: -2px 2px 0 -2px;
+    bottom: -2px;
+    right: 2px;
+    
+}
+.contact div:active{
+    background-color: var(--tertiary-color);
+     
+}
+
+
+
+.contact div img {
+    width: 1.1em;
+}
+.contact a{
+    text-decoration: none;
+    color: black;
+}
+
+.arrow5{
+    position: absolute;
+    bottom: -7em;
+    left: -0.2em;
+    width: 50%;
+    height: 40%px;
+    stroke-width: 1px;
+    stroke: black;
+    z-index: -1;
+
+}
+
+/* section 7 and 8 */
+/* number */
+.number{
+    margin-top: 3em;
+    width: 9em;
+    height: 3em;
+    position: relative;
+    right: -3em;
+}
+
+.number-box{
+    width: 9em;
+    height: 3em;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: start;
+    align-items: flex-end; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
+    border: 2px solid black;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transition: bottom 500ms ease-out, left 500ms ease-out;
+
+
+}
+.number .number-box:hover{
+    bottom: -0.3em;
+    left: -0.2em;
+}
+.number .number-box:hover + .number-shadow{
+    transform: translate( -3px , -35px );
+}
+
+.number-triange{
+    width: 0;
+    height: 0;
+    border-top: 15px solid var(--primary-color);
+    border-left: 17px solid transparent;
+    box-shadow: 0 0 0 2px black;
+}
+
+.number-shadow{
+    width: 8.8em;
+    height: 2.5em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
+    background-color: black;
+    position: absolute;
+    z-index: -1;    	
+    transform: translate( -4px , -35px );
+    transition: transform 500ms ease-out;
+}
+
+.number-box h4{
+    font-size: 0.8em;
+    position: absolute;
+    align-self: center;
+    margin-left: 2.5em;
+    color: black;
+}
+.arrow6{
+    position: absolute;
+    z-index: -3;
+    width: 9em;
+    top: 1.5em;
+    right: -5.4em;
+    stroke: black;
+
+}
+/* email */
+.email{
+    margin-top: 1em;
+    margin-bottom: 10em;
+    width: 11em;
+    height: 3em;
+    position: relative;
+    left: -2.5em;
+    top: 0.5em;
+}
+
+.email-box{
+    width: 11em;
+    height: 3em;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: start;
+    align-items: flex-end; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
+    border: 2px solid black;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transition: bottom 500ms ease-out, left 500ms ease-out;
+}
+
+.email .email-box:hover{
+    bottom: -0.3em;
+    left: -0.3em;
+}
+
+.email-triange{
+    width: 0;
+      height: 0;
+      border-top: 15px solid var(--primary-color);
+      border-left: 19px solid transparent;
+      box-shadow: 0 0 0 2px black ;
+}
+
+.email-shadow{
+    width: 10em;
+    height: 2.5em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
+    background-color: black;
+    position: absolute;
+    z-index: -1;    	
+    transform: translate( -5px , -35px );
+   
+}
+
+.email-box h4{
+    font-size: 0.8em;
+    position: absolute;
+    align-self: center;
+    margin-left: 2.4em;
+    color: black;
+}
+ 
+/* responsive */
+
+@media only screen and (max-width: 320px) {
+
+    .container{
+
+}
+/* section 1 */
+.profile{
+    height: 16em;
+    width: 12em;
+
+}
+.profile-box{
+    height: 16em;
+    width: 12em;
+}
+.profile-head{
+    width: 100%;
+    height: 1em;
+    
+}
+.profile-button {
+    width: 0.6em;
+    height: 0.6em;
+    margin: 0 0.2em;
+ }
+
+#toghiri-photo{
+    width: 12em;
+}
+.arrow1{
+    right: -1.6em;
+    bottom: -5.2em;
+}
+
+/* section 2 */
+
+.name{
+    margin-top: 1.7em;
+    width: 11em;
+    height: 3.5em;
+    left: -2.8em;
+}
+
+.name-box{
+    width: 11em;
+    height: 3.5em;
+}
+
+.name-triange{
+      border-top: 20px solid var(--primary-color);
+      border-left: 22px solid transparent;
+}
+
+.name-shadow{
+    width: 9.5em;
+    height: 3em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
+    background-color: black;
+    position: absolute;
+    z-index: -1;    	
+    transform: translate( -4px , 12px );
+}
+
+.name-box h1{
+    font-size: 0.9em;
+    margin-left: 3em;
+}
+.arrow2{
+     bottom: -3.4em;
+}
+.key{
+    top: 2.2em;
+}
+
+
+/* section 3 - feild */
+
+.feild{
+    margin-top: 1.8em;
+}
+
+.feild-box h2{
+    font-size: 0.8em;
+    margin-left: 2.6em;
+}
+
+.arrow3{
+    right: -1.2em;
+}
+.suitable{
+    left: -2.3em;
+    bottom: -0.6em;
+    width: 1.6em;
+}
+
+/* section 4 - about me */
+.aboutme{
+    width: 13em;
+    height: 18em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.aboutme::after{
+    width: 12.7em;
+    height: 17.7em;
+    transform: translate(0.4em , -17.4em);
+       
+}
+.aboutme::before{
+    width: 12.7em;
+    height: 17.7em;
+    transform: translate(0.8em , 0.9em);
+}
+
+
+/* section 6 - contact me - number  */
+.media-grid{
+    gap: 1em;
+}
+
+.contact{
+    right: -0.5em;
+}
+
+.number{
+    right: -2.5em;
+}
+
+} 
