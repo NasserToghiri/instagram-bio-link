@@ -664,9 +664,7 @@ top: 6em;
 /* responsive */
 
 @media only screen and (max-width: 320px) {
-.container{
-    background-color: red;
-}
+
 /* section 1 */
 .profile{
     height: 16em;
