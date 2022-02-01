@@ -98,7 +98,9 @@ body{
     top: -2.2em;
     right: -2.5em;
     animation: star-rotate 4s infinite;
+    
 }
+
 
 .line{
     position: absolute;
@@ -127,8 +129,8 @@ body{
 .profile .pencil {
     position: absolute;
     z-index: 2;
-    top: -1.5em;
-    left: 1em;
+    top: -1em;
+    left: 2em;
 }
 
 .arrow1{
@@ -136,7 +138,7 @@ body{
     position: absolute;
     stroke-width: 2px;
     stroke: black;
-    right: -2.3em;
+    right: -1.5em;
     bottom: -6.9em;
     fill: transparent;
 }
@@ -153,65 +155,45 @@ body{
 }
 
 .name-box{
-    width: 13em;
+    width: 12em;
     height: 4em;
-    background-color: var(--secondary-color);
     display: flex;
-    justify-content: start;
-    align-items: flex-end; 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
-    border: 2px solid black;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(-5px 5px 0 black);
+    position: relative;
     bottom: 0;
     left: 0;
-    transition: bottom 500ms ease-out, left 500ms ease-out;
+    transition: filter 500ms ease-out, bottom 500ms ease-out, left 500ms ease-out;
 }
-
-.name .name-box:hover{
-    bottom: -0.3em;
-    left: -0.2em;
+.box1{
+    width: 12em;
+    position: relative;
 }
-.name .name-box:hover + .name-shadow{
-    transform: translate( -3px , 12px );
+.name-box:hover{
+    bottom: -5px;
+    left: -5px;
+    filter: drop-shadow(0 0 black);
 }
-.name-triange{
-    width: 0;
-      height: 0;
-      border-top: 23px solid var(--primary-color);
-      border-left: 25px solid transparent;
-      box-shadow: 0 0 0 2px black ;
-}
-
-.name-shadow{
-    width: 11.5em;
-    height: 3.5em;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
-    background-color: black;
-    position: absolute;
-    z-index: -1;    	
-    transform: translate( -4px , 12px );
-    transition: transform 500ms ease-out;
-}
-
 .name-box h1{
     font-size: 1.1em;
     position: absolute;
-    align-self: center;
-    margin-left: 2.6em;
-    color: black;
+    margin-left: 0.6em;
+    color: black;    
 }
+
 .arrow2{
     position: absolute;
     width: 40%;
     stroke-width: 2px;
     stroke: black;
-    bottom: -4em;
+    bottom: -3.8em;
 
 }
 .key{
     width: 2em;
     position: absolute;
-    right: -2.5em;
+    right: -1.6em;
     top: 2.5em;
 }
 
@@ -229,45 +211,26 @@ body{
 
 .feild-box{
     width: 12.5em;
-    height: 3.8em;
-    background-color: var(--secondary-color);
+    height: 4.5em;
     display: flex;
-    justify-content: start;
-    align-items: flex-end; 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
-    border: 2px solid black;
+    justify-content: center;
+    align-items: center; 
     position: relative;
     bottom: 0;
     left: 0;
-    transition: bottom 500ms ease-out, left 500ms ease-out;
+    filter: drop-shadow(-5px 5px 0 black);
+    transition: filter 500ms ease-out, bottom 500ms ease-out, left 500ms ease-out;
 }
-.feild .feild-box:hover{
-    bottom: -0.3em;
-    left: -0.2em;
+.box2{
+    width: 12.5em;
+    position: relative;
 }
-.feild .feild-box:hover + .feild-shadow{
-    width: 11.2em;
-    left: 2px;
-}
-.feild-triange{
-    width: 0;
-    height: 0;
-    border-top: 20px solid var(--primary-color);
-    border-left: 23px solid transparent;
-    box-shadow: 0 0 0 2px black ;
+.feild-box:hover{
+    bottom: -5px;
+    left: -5px;
+    filter: drop-shadow(0 0 black);
 }
 
-.feild-shadow{
-    width: 11.5em;
-    height: 3.3em;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
-    background-color: black;
-    position: absolute;
-    left: 0;
-    z-index: -1;    	
-    transform: translate( -5px , -48px );
-    transition: left 500ms ease-out, width 500ms ease-out;
-}
 
 .feild-box h2{
     font-size: 0.8em;
@@ -284,11 +247,11 @@ body{
     stroke: black;
     stroke-width: 2px;
     right: -2.8em;
-    bottom: -6em;
+    bottom: -6.2em;
 }
 .suitable{
     position: absolute;
-    left: -2.5em;
+    left: -3em;
     bottom: -1em;
     width: 2em;
 }
@@ -301,7 +264,6 @@ body{
     margin-top: 3em;
     margin-bottom: 3em;
     border: 2px solid black;
-    box-shadow: ;
     position: relative;
     left: -1em;
 }
@@ -469,7 +431,7 @@ top: 6em;
 .social-media:hover{
     box-shadow: -3px 3px 0 -3px;
     left: -6px;
-    bottom: 6x;
+    bottom: 6px;
 }
 .social-media:active .click-here{
     background-color: var(--tertiary-color);
@@ -517,6 +479,7 @@ top: 6em;
     top: -3.5em;
     left: 5em;
     transform: rotate(15deg);
+
 
 }
 .line-animation{
@@ -596,7 +559,6 @@ top: 6em;
     bottom: -7em;
     left: -0.2em;
     width: 50%;
-    height: 40%px;
     stroke-width: 1px;
     stroke: black;
     z-index: -1;
@@ -607,60 +569,39 @@ top: 6em;
 /* number */
 .number{
     margin-top: 3em;
-    width: 9em;
+    width: 8em;
     height: 3em;
     position: relative;
     right: -3em;
 }
 
 .number-box{
-    width: 9em;
+    width: 8em;
     height: 3em;
-    background-color: var(--secondary-color);
     display: flex;
-    justify-content: start;
-    align-items: flex-end; 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
-    border: 2px solid black;
+    justify-content: center;
+    align-items: center; 
     position: relative;
     bottom: 0;
     left: 0;
-    transition: bottom 500ms ease-out, left 500ms ease-out;
-
-
+    filter: drop-shadow(-4px 4px 0 black);
+    transition: filter 500ms ease-out, bottom 500ms ease-out, left 500ms ease-out;
 }
-.number .number-box:hover{
-    bottom: -0.3em;
-    left: -0.2em;
+.box3{
+    width: 8em;
+    position: relative;
 }
-.number .number-box:hover + .number-shadow{
-    transform: translate( -3px , -35px );
-}
-
-.number-triange{
-    width: 0;
-    height: 0;
-    border-top: 15px solid var(--primary-color);
-    border-left: 17px solid transparent;
-    box-shadow: 0 0 0 2px black;
-}
-
-.number-shadow{
-    width: 8.8em;
-    height: 2.5em;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
-    background-color: black;
-    position: absolute;
-    z-index: -1;    	
-    transform: translate( -4px , -35px );
-    transition: transform 500ms ease-out;
+.number-box:hover{
+    bottom: -4px;
+    left: -4px;
+    filter: drop-shadow(0 0 black);
 }
 
 .number-box h4{
     font-size: 0.8em;
     position: absolute;
     align-self: center;
-    margin-left: 2.5em;
+    margin-left: 0.5em;
     color: black;
 }
 .arrow6{
@@ -686,47 +627,31 @@ top: 6em;
 .email-box{
     width: 11em;
     height: 3em;
-    background-color: var(--secondary-color);
     display: flex;
-    justify-content: start;
-    align-items: flex-end; 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
-    border: 2px solid black;
+    justify-content: center;
+    align-items: center; 
     position: relative;
     left: 0;
     bottom: 0;
-    transition: bottom 500ms ease-out, left 500ms ease-out;
+    filter: drop-shadow(-4px 4px 0 black);
+    transition: filter 700ms ease-out, bottom 700ms ease-out, left 700ms ease-out;
 }
 
-.email .email-box:hover{
-    bottom: -0.3em;
-    left: -0.3em;
+.box4{
+    width: 11em;
+    position: relative;
 }
-
-.email-triange{
-    width: 0;
-      height: 0;
-      border-top: 15px solid var(--primary-color);
-      border-left: 19px solid transparent;
-      box-shadow: 0 0 0 2px black ;
-}
-
-.email-shadow{
-    width: 10em;
-    height: 2.5em;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
-    background-color: black;
-    position: absolute;
-    z-index: -1;    	
-    transform: translate( -5px , -35px );
-   
+.email-box:hover{
+    bottom: -4px;
+    left: -4px;
+    filter: drop-shadow(0 0 black);
 }
 
 .email-box h4{
     font-size: 0.8em;
     position: absolute;
     align-self: center;
-    margin-left: 2.4em;
+    margin-left: 0.5em;
     color: black;
 }
  
@@ -734,9 +659,6 @@ top: 6em;
 
 @media only screen and (max-width: 320px) {
 
-    .container{
-
-}
 /* section 1 */
 .profile{
     height: 16em;
@@ -765,6 +687,10 @@ top: 6em;
     right: -1.6em;
     bottom: -5.2em;
 }
+.profile .pencil {
+    top: -1.3em;
+    left: 1em;
+}
 
 /* section 2 */
 
@@ -779,31 +705,19 @@ top: 6em;
     width: 11em;
     height: 3.5em;
 }
-
-.name-triange{
-      border-top: 20px solid var(--primary-color);
-      border-left: 22px solid transparent;
-}
-
-.name-shadow{
-    width: 9.5em;
-    height: 3em;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 55%);
-    background-color: black;
-    position: absolute;
-    z-index: -1;    	
-    transform: translate( -4px , 12px );
+.box1{
+    width: 11em;
 }
 
 .name-box h1{
     font-size: 0.9em;
-    margin-left: 3em;
 }
 .arrow2{
      bottom: -3.4em;
 }
 .key{
     top: 2.2em;
+    right: -2.5em;
 }
 
 
@@ -812,14 +726,17 @@ top: 6em;
 .feild{
     margin-top: 1.8em;
 }
-
+.box2{
+    width: 11.5em;
+}
 .feild-box h2{
-    font-size: 0.8em;
-    margin-left: 2.6em;
+    font-size: 0.7em;
+
 }
 
 .arrow3{
     right: -1.2em;
+    bottom: -6.1em;
 }
 .suitable{
     left: -2.3em;
@@ -857,7 +774,7 @@ top: 6em;
 }
 
 .number{
-    right: -2.5em;
+    right: -3em;
 }
 
 } 
