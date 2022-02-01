@@ -203,14 +203,16 @@ body{
 
 .feild{
     margin-top: 3em;
-    width: 12.5em;
-    height: 3.8em;
+    width: 14em;
+    height: 4.5em;
     position: relative;
+    bottom: 0;
+    left: 2em;
     
 }
 
 .feild-box{
-    width: 12.5em;
+    width: 14em;
     height: 4.5em;
     display: flex;
     justify-content: center;
@@ -222,7 +224,7 @@ body{
     transition: filter 500ms ease-out, bottom 500ms ease-out, left 500ms ease-out;
 }
 .box2{
-    width: 12.5em;
+    width: 14em;
     position: relative;
 }
 .feild-box:hover{
@@ -236,7 +238,7 @@ body{
     font-size: 0.8em;
     position: absolute;
     align-self: center;
-    margin-left: 2.4em;
+    margin-left: 0.4em;
     color: black;
     line-height: 1.5em;
 }
@@ -246,7 +248,7 @@ body{
     width: 50%;
     stroke: black;
     stroke-width: 2px;
-    right: -2.8em;
+    right: -0.8em;
     bottom: -6.2em;
 }
 .suitable{
@@ -257,6 +259,7 @@ body{
 }
 
 /* section 4 - about me */
+
 .aboutme{
     width: 16em;
     height: 16em;
@@ -274,8 +277,9 @@ body{
     background-color: var(--primary-color);
     border: 2px solid black;
     position: absolute;
+    top: 0.4em;
+    left: 0.4em;
     z-index: -1;
-    transform: translate(0.4em , -13.4em);
        
 }
 .aboutme::before{
@@ -285,8 +289,10 @@ body{
     background-color: var(--primary-color);
     border: 2px solid black;
     position: absolute;
+    top: 0.8em;
+    left: 0.8em;
     z-index: -2;
-    transform: translate(0.8em , 0.9em);
+    
 }
 .title-aboutme p {
     font-size: 1em;
@@ -638,7 +644,7 @@ top: 6em;
 }
 
 .box4{
-    width: 11em;
+    width: 12em;
     position: relative;
 }
 .email-box:hover{
@@ -658,7 +664,9 @@ top: 6em;
 /* responsive */
 
 @media only screen and (max-width: 320px) {
-
+.container{
+    background-color: red;
+}
 /* section 1 */
 .profile{
     height: 16em;
@@ -695,7 +703,7 @@ top: 6em;
 /* section 2 */
 
 .name{
-    margin-top: 1.7em;
+    margin-top: 2em;
     width: 11em;
     height: 3.5em;
     left: -2.8em;
@@ -724,10 +732,12 @@ top: 6em;
 /* section 3 - feild */
 
 .feild{
-    margin-top: 1.8em;
+    margin-top: 2em;
+    left: 1em;
+
 }
 .box2{
-    width: 11.5em;
+    width: 12.5em;
 }
 .feild-box h2{
     font-size: 0.7em;
@@ -735,13 +745,13 @@ top: 6em;
 }
 
 .arrow3{
-    right: -1.2em;
+    right: 0.2em;
     bottom: -6.1em;
 }
 .suitable{
-    left: -2.3em;
+    left: -1.7em;
     bottom: -0.6em;
-    width: 1.6em;
+    width: 1.8em;
 }
 
 /* section 4 - about me */
@@ -754,13 +764,12 @@ top: 6em;
 .aboutme::after{
     width: 12.7em;
     height: 17.7em;
-    transform: translate(0.4em , -17.4em);
+   
        
 }
 .aboutme::before{
     width: 12.7em;
     height: 17.7em;
-    transform: translate(0.8em , 0.9em);
 }
 
 
