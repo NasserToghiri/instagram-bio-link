@@ -755,19 +755,19 @@ top: 6em;
 /* section 4 - about me */
 .aboutme{
     width: 13em;
-    height: 18em;
+    height: 19em;
     margin-top: 3em;
     margin-bottom: 3em;
 }
 .aboutme::after{
     width: 12.7em;
-    height: 17.7em;
+    height: 18.7em;
    
        
 }
 .aboutme::before{
     width: 12.7em;
-    height: 17.7em;
+    height: 18.7em;
 }
 
 
